@@ -3,15 +3,54 @@ main{
   margin: 0 auto;
 }
 
-input{
-  padding: 10px;
-  border-radius: 5px;
-  width: 400px;
-  font-size: 22px;
-  margin: 10px;
+.beerDropdown{
+  position: relative;
+  display: inline-block;
+  font-family:verdana;
+
 }
 
-.album{
+.beer_list{
   padding: 5px;
 }
 
+body {
+    background-image: url("http://www.barracudatavern.com/images/background-image.jpg");
+    width: 100%;
+}
+
+ul{
+  margin-top: 30px;
+}
+
+li {
+color: #fff;
+background-color: rgba(0,0,0,0.6);
+display:inline-table;
+float: left;
+padding: 5rem;
+color:white;
+font-family:verdana;
+font-size: 15px;
+margin-top: 50px;
+margin-left: 50px;
+}
+
+h1 {
+  color:white;
+  font-family:verdana;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+h3 {
+  color:white;
+  font-family:verdana;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+img {
+  margin-top: 50px;
+}

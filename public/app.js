@@ -3,15 +3,14 @@ const makeRequest = function(url, callback){
   request.open('GET', url);
   request.addEventListener('load', callback);
   request.send();
-}
+};
 
 const requestComplete = function(){
   if(this.status !== 200) return;
   const jsonString = this.responseText;
   const beers = JSON.parse(jsonString);
-    // console.log(this);
   populateList(beers);
-}
+};
 
 const populateList = function(beers){
   let selectTag = document.getElementById('beerDropdown');
@@ -36,7 +35,7 @@ const clearContent = function(node){
   while(node.hasChildNodes()){
     node.removeChild(node.lastChild);
   }
-}
+};
 
 const displayList = function(beer){
   console.log(beer);
@@ -48,8 +47,7 @@ const displayList = function(beer){
   let imgBeer = document.createElement('img');
   imgBeer.src = beer.image_url;
   ulTag.appendChild(imgBeer);
-}
-
+};
 
 var app = function(){
 const url = 'https://api.punkapi.com/v2/beers';
@@ -57,8 +55,8 @@ var jsonString = localStorage.getItem('beer');
 if(jsonString !== null){
   var savedBeer = JSON.parse(jsonString);
   displayList(savedBeer);
-}
+};
 makeRequest(url, requestComplete);
-}
+};
 
 window.addEventListener('load', app);
