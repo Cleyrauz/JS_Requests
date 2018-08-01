@@ -12,6 +12,13 @@ const requestComplete = function(){
   populateList(beers);
 }
 
+const populateList = function(beers){
+  let ulTag = document.getElementsById('beer-list');
+  beers.forEach((beer) => {
+    let li = bearContainer(beer);
+    ulTag.appendChild(li);
+  });
+}
 
 var app = function(){
 const url = 'https://api.punkapi.com/v2/beers';
