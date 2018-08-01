@@ -42,8 +42,17 @@ const displayList = function(beer){
   let ulTag = document.getElementById('beer_list');
   clearContent(ulTag);
   let nameBeer = document.createElement('li');
-  nameBeer.innerText = beer.name;
+  nameBeer.innerText = `Name: ` + beer.name;
   ulTag.appendChild(nameBeer);
+  let dateBeer = document.createElement('li');
+  dateBeer.innerText = `First brewed: ` + beer.first_brewed;
+  ulTag.appendChild(dateBeer);
+  let tagBeer = document.createElement('li');
+  tagBeer.innerText = `Tag line: ` +beer.tagline;
+  ulTag.appendChild(tagBeer);
+  let infoBeer = document.createElement('li');
+  infoBeer.innerText = beer.description;
+  ulTag.appendChild(infoBeer);
   let imgBeer = document.createElement('img');
   imgBeer.src = beer.image_url;
   ulTag.appendChild(imgBeer);
